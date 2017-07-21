@@ -33,7 +33,7 @@
                       <div class="form-group">
                         <label class="col-sm-3 control-label" for="form-control-3">Status</label>
                           <div class="col-sm-6">
-                            <select class="md-form-control" name="status" required>
+                            <select class="md-form-control" name="status" id="ruangan" required>
                                 <option value="none" selected="selected">-Pilih Status-</option>
                                 <option value="active">active</option>
                                 <option value="not active">not active</option>
@@ -81,6 +81,17 @@
       })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-83990101-1', 'auto');
       ga('send', 'pageview');
+	  $( "form" ).submit(function( event ) {	  
+	  
+	  if($( "#ruangan :selected" ).val() == 'none'){
+			alert('Status Harus Dipilih !!');
+			event.preventDefault();
+	  }else{
+		return;  
+	  }
+	  
+	  //$( "#ruangan" ).text( "Not valid!" ).show().fadeOut( 1000 );
+	});
   </script>
   </body>
 <!-- Mirrored from demo.naksoid.com/elephant/flatistic-green/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Nov 2016 06:10:08 GMT -->
