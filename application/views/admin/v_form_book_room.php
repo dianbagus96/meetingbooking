@@ -61,7 +61,7 @@
                       <div class="form-group">
                         <label class="col-sm-3 control-label" for="form-control-1">Ruangan</label>
                          <div class="col-sm-6">
-                          <select class="md-form-control" name="ruang" required>
+                          <select class="md-form-control" name="ruang" id="ruangan" required>
                             <option value="none" selected="selected">--Pilih Ruangan--</option>
                           <?php foreach ($ruang as $room) : ?>
                             <option value="<?php echo $room->id_ruang ?>"><?php echo $room->nama_ruang; ?></option>
@@ -81,6 +81,7 @@
                         <div class="col-sm-3"></div>
                         <div class="col-sm-3">
                           <button type="submit" class="btn btn-primary btn-block">Book</button>
+						  <!--<a onclick="myFunction();" class="btn btn-primary btn-block">Book</a>-->
                         </div>
                       </div>
                     </form>
@@ -110,6 +111,18 @@
       })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-83990101-1', 'auto');
       ga('send', 'pageview');
+	  
+	  $( "form" ).submit(function( event ) {	  
+	  
+	  if($( "#ruangan :selected" ).val() == 'none'){
+			alert('Ruangan Harus Dipilih !!');
+			event.preventDefault();
+	  }else{
+		return;  
+	  }
+	  
+	  //$( "#ruangan" ).text( "Not valid!" ).show().fadeOut( 1000 );
+	});
   </script>
   </body>
 <!-- Mirrored from demo.naksoid.com/elephant/flatistic-green/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Nov 2016 06:10:08 GMT -->
