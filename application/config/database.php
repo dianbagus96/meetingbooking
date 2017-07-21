@@ -48,9 +48,9 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = '192.168.5.23';
-$db['default']['username'] = 'dev';
-$db['default']['password'] = 'D3vs!sf0admin';
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
 $db['default']['database'] = 'sewa';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
